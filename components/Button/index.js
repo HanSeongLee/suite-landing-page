@@ -2,11 +2,13 @@ import React from "react";
 import styles from './style.module.scss';
 import cn from "classnames";
 
-const Button = ({ variants='outline', size='small', children, ...props}) => {
+const Button = ({ variants='fill', size='normal', children, ...props}) => {
     return (
         <button className={cn(styles.button, {
             [styles.outline]: variants === 'outline',
-            [styles.small]: size === 'small'
+            [styles.fill]: variants === 'fill',
+            [styles.small]: size === 'small',
+            [styles.normal]: size === 'normal'
         })}
                 {...props}
         >

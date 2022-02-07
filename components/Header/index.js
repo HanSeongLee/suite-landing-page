@@ -10,7 +10,9 @@ const Header = () => {
             <Container className={styles.container}>
                 <Logo />
 
-                <Button>
+                <Button variants={'outline'}
+                        size={'small'}
+                >
                     Request Beta Access
                 </Button>
             </Container>
