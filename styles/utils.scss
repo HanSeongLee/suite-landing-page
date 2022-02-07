@@ -1,3 +1,33 @@
 @import '~include-media/dist/include-media';
 
 $breakpoints: (mobile: 568px, tablet: 768px, desktop: 992px);
+
+@mixin font($font-size, $line-height, $letter-spacing) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin heading_xl() {
+  @include font(72px, 78px, -1px);
+}
+
+@mixin heading_l() {
+  @include font(48px, 56px, -0.5px);
+}
+
+@mixin heading_m() {
+  @include font(18px, 32px, -0.2px);
+}
+
+@mixin heading_s() {
+  @include font(16px, 26px, -2.5px);
+}
+
+@mixin font_quote() {
+  @include font(20px, 32px, 0px);
+}
+
+@mixin font_body() {
+  @include font(18px, 32px, 0px);
+}
