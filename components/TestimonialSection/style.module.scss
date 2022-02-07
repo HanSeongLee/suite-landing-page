@@ -1,0 +1,77 @@
+
+.testimonialSection {
+  position: relative;
+  background: #172339;
+  text-align: center;
+  border-radius: 15px;
+  padding: 338px 0 64px;
+  margin-top: 237px;
+
+  &::before {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    width: 343px;
+    height: 402px;
+    background: url("/img/pattern-blur.svg") no-repeat;
+    background-size: contain;
+    content: "";
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    width: 252px;
+    height: 402px;
+    background: url("/img/image-jeremy-small@2x.png") no-repeat;
+    background-size: contain;
+    content: "";
+    transform: translateX(-50%);
+  }
+
+  .title {
+    position: relative;
+    color: #FAF8F6;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: normal;
+    letter-spacing: -0.4px;
+    margin-bottom: 40px;
+
+    &::before {
+      position: absolute;
+      top: calc(-100% - 30px);
+      left: 50%;
+      width: 50px;
+      height: 40px;
+      background: url("/img/pattern-curved-line-2.svg") no-repeat;
+      background-size: contain;
+      content: "";
+      transform: translateX(-50%);
+    }
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.09px;
+    color: #F3EDE7;
+    margin-bottom: 40px;
+  }
+
+  .username {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 2.5px;
+    color: #F3EDE7;
+
+    strong {
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: -0.18px;
+      color: #FAF8F6;
+    }
+  }
+}
