@@ -1,0 +1,18 @@
+
+.button {
+  font-weight: bold;
+  border-radius: 6px;
+
+  &.outline {
+    background: transparent;
+    color: #172339;
+    border: 1px solid #172339;
+  }
+
+  &.small {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.14px;
+    padding: 12px 16.5px 12px 15.5px;
+  }
+}
