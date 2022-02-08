@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
+import TestimonialSection from "../components/TestimonialSection";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -55,6 +58,9 @@ export default function Home() {
 
       <main>
         <Header />
+        <HeroSection />
+        <TestimonialSection />
+        <Footer />
       </main>
     </>
   )
