@@ -5,7 +5,7 @@ import Container from "../Container";
 const TestimonialSection = () => {
     return (
         <section className={styles.testimonialSection}>
-            <Container>
+            <Container className={styles.container}>
                 <h2 className={styles.title}>
                     It just <strong>works.</strong>
                 </h2>

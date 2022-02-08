@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .testimonialSection {
   position: relative;
@@ -7,6 +8,11 @@
   padding: 338px 0 64px;
   margin-top: 237px;
   z-index: 1;
+
+  @include media(">tablet") {
+    margin: 273px auto 0;
+    max-width: 689px;
+  }
 
   &::before {
     position: absolute;
@@ -32,47 +38,53 @@
     transform: translateX(-50%);
   }
 
-  .title {
-    position: relative;
-    color: #FAF8F6;
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: normal;
-    letter-spacing: -0.4px;
-    margin-bottom: 40px;
-
-    &::before {
-      position: absolute;
-      top: calc(-100% - 30px);
-      left: 50%;
-      width: 50px;
-      height: 40px;
-      background: url("/img/pattern-curved-line-2.svg") no-repeat;
-      background-size: contain;
-      content: "";
-      transform: translateX(-50%);
+  .container {
+    @include media(">tablet") {
+      max-width: 573px;
     }
-  }
 
-  .description {
-    font-size: 18px;
-    line-height: 32px;
-    letter-spacing: 0.09px;
-    color: #F3EDE7;
-    margin-bottom: 40px;
-  }
+    .title {
+      position: relative;
+      color: #FAF8F6;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: normal;
+      letter-spacing: -0.4px;
+      margin-bottom: 40px;
 
-  .username {
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 2.5px;
-    color: #F3EDE7;
+      &::before {
+        position: absolute;
+        top: calc(-100% - 30px);
+        left: 50%;
+        width: 50px;
+        height: 40px;
+        background: url("/img/pattern-curved-line-2.svg") no-repeat;
+        background-size: contain;
+        content: "";
+        transform: translateX(-50%);
+      }
+    }
 
-    strong {
+    .description {
       font-size: 18px;
       line-height: 32px;
-      letter-spacing: -0.18px;
-      color: #FAF8F6;
+      letter-spacing: 0.09px;
+      color: #F3EDE7;
+      margin-bottom: 40px;
+    }
+
+    .username {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 2.5px;
+      color: #F3EDE7;
+
+      strong {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.18px;
+        color: #FAF8F6;
+      }
     }
   }
 }
