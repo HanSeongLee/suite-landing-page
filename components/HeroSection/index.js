@@ -6,23 +6,30 @@ import Container from "../Container";
 const HeroSection = () => {
     return (
         <section className={styles.heroSection}>
-            <Container>
+            <Container className={styles.introContainer}>
                 <h2 className={styles.title}>
-                    A <strong>super <span>solution</span></strong>
+                    A <strong>super <span>solution</span></strong>&nbsp;<br/>
                     for your <strong>business.</strong>
                 </h2>
                 <p className={styles.description}>
-                    Our marketing and sales automations help you scale your outreach to get more leads for your company.
+                    Our marketing and sales automations help you scale your outreach to get more leads for your
+                    company.
                 </p>
                 <Button>
                     Request Beta Access
                 </Button>
-            </Container>
-            <Container>
-                <img className={styles.landscapeImage}
-                     src={'/img/image-hero-landscape@2x.png'}
-                     alt={'landscape'}
-                />
+
+                <div className={styles.landscapeContainer}>
+                    <picture>
+                        <source srcSet={'/img/image-hero-portrait@2x.png'}
+                                media={'(min-width: 768px)'}
+                        />
+                        <img className={styles.landscapeImage}
+                             src={'/img/image-hero-landscape@2x.png'}
+                             alt={'landscape'}
+                        />
+                    </picture>
+                </div>
             </Container>
             <Container className={styles.featureContainer}>
                 <div>
