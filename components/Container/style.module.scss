@@ -1,4 +1,11 @@
+@import "styles/utils";
 
 .container {
   padding: 0 16px;
+
+  @include media(">tablet") {
+    max-width: 689px;
+    padding: 0;
+    margin: auto;
+  }
 }
