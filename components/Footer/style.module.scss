@@ -1,7 +1,12 @@
+@import "styles/utils";
 
 .footer {
   position: relative;
   padding: 56px 0 80px;
+
+  @include media(">tablet") {
+    padding: 72px 0;
+  }
 
   &::before {
     position: absolute;
@@ -11,6 +16,11 @@
     height: calc(100% + 134px);
     background: #F3EDE7;
     content: "";
+
+    @include media(">tablet") {
+      top: -463px;
+      height: calc(100% + 463px);
+    }
   }
 
   .container {
@@ -20,6 +30,11 @@
     align-items: center;
     grid-gap: 33px;
     text-align: center;
+
+    @include media(">tablet") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     .copyright {
       font-size: 15px;
