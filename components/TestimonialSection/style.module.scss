@@ -14,6 +14,16 @@
     max-width: 689px;
   }
 
+  @include media(">desktop") {
+    text-align: left;
+    margin: 299px auto 0;
+    max-width: 1110px;
+    padding: 88px 125px;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    grid-template-areas: "empty container";
+  }
+
   &::before {
     position: absolute;
     top: -180px;
@@ -24,6 +34,15 @@
     background-size: contain;
     content: "";
     transform: translateX(-50%);
+
+    @include media(">desktop") {
+      top: initial;
+      bottom: 0;
+      left: 60px;
+      width: 500px;
+      height: 500px;
+      transform: none;
+    }
   }
 
   &::after {
@@ -36,9 +55,20 @@
     background-size: contain;
     content: "";
     transform: translateX(-50%);
+
+    @include media(">desktop") {
+      top: initial;
+      left: 112px;
+      bottom: 0;
+      width: 375px;
+      height: 600px;
+      transform: none;
+    }
   }
 
   .container {
+    grid-area: container;
+
     @include media(">tablet") {
       max-width: 573px;
     }
@@ -52,6 +82,12 @@
       letter-spacing: -0.4px;
       margin-bottom: 40px;
 
+      @include media(">desktop") {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.5px;
+      }
+
       &::before {
         position: absolute;
         top: calc(-100% - 30px);
@@ -62,6 +98,14 @@
         background-size: contain;
         content: "";
         transform: translateX(-50%);
+
+        @include media(">desktop") {
+          top: calc(100% + 17px);
+          left: -100px;
+          width: 64px;
+          height: 52px;
+          transform: none;
+        }
       }
     }
 
@@ -71,6 +115,12 @@
       letter-spacing: 0.09px;
       color: #F3EDE7;
       margin-bottom: 40px;
+
+      @include media(">desktop") {
+        font-size: 20px;
+        line-height: 35px;
+        letter-spacing: 0.1px;
+      }
     }
 
     .username {
