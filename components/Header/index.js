@@ -8,7 +8,9 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <Container className={styles.container}>
-                <Logo />
+                <h1>
+                    <Logo/>
+                </h1>
 
                 <Button variants={'outline'}
                         size={'small'}
