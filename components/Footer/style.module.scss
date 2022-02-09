@@ -56,6 +56,22 @@
       list-style: none;
       display: flex;
       grid-gap: 28px;
+
+      @include media(">desktop") {
+        a {
+          svg path {
+            transition: fill 0.3s;
+          }
+
+          &:hover {
+
+
+            svg path {
+              fill: rgba(23, 35, 57, 0.5);
+            }
+          }
+        }
+      }
     }
   }
 }
