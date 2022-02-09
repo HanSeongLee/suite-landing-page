@@ -8,4 +8,8 @@
     padding: 0;
     margin: auto;
   }
+
+  @include media(">desktop") {
+    max-width: 1110px;
+  }
 }
