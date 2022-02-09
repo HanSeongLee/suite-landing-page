@@ -12,6 +12,13 @@
     padding-top: 168px;
   }
 
+  @include media(">desktop") {
+    max-width: 1110px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 190px;
+  }
+
   .introContainer {
     position: relative;
     z-index: 1;
@@ -30,11 +37,16 @@
       margin-bottom: 32px;
 
       @include media(">tablet") {
-        max-width: 573px;
         font-size: 56px;
         line-height: 64px;
         letter-spacing: -0.8px;
         margin-bottom: 40px;
+      }
+
+      @include media(">desktop") {
+        font-size: 72px;
+        line-height: 78px;
+        letter-spacing: -1px;
       }
 
       span {
@@ -68,6 +80,13 @@
         letter-spacing: 0.09px;
         margin-bottom: 40px;
       }
+
+      @include media(">desktop") {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+        margin-bottom: 52px;
+      }
     }
   }
 
@@ -92,6 +111,11 @@
         width: 281px;
         height: 482px;
       }
+
+      @include media(">desktop") {
+        width: 350px;
+        height: 600px;
+      }
     }
   }
 
@@ -110,6 +134,13 @@
       > div {
         flex: 1;
       }
+    }
+
+    @include media(">desktop") {
+      flex-direction: column;
+      text-align: left;
+      height: 100%;
+      grid-gap: 63px;
     }
 
     .numbers {
