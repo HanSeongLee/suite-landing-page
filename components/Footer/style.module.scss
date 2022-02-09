@@ -21,6 +21,11 @@
       top: -463px;
       height: calc(100% + 463px);
     }
+
+    @include media(">desktop") {
+      top: -266px;
+      height: calc(100% + 266px);
+    }
   }
 
   .container {
